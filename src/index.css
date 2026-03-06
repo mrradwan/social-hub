@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin './hero.js';
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+@layer components {
+  .btn {
+    cursor: pointer;
+    border-width: 1px;
+    border-radius: var(--radius-xl);
+    border-style: var(--tw-border-style);
+    border-color: color-mix(in oklab, var(--color-gray-400) 30%, transparent);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .form-control {
+    @apply w-full bg-gray-100 border border-gray-400/40 rounded-xl px-4 py-3 transition duration-200 focus:border focus:border-blue-600 focus:outline-0;
+  }
+}
