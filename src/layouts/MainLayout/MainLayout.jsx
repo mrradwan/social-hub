@@ -36,7 +36,7 @@ export default function MainLayout() {
           <div
             className={`grid gap-4 ${
               hideSidebars
-                ? "mx-auto grid-cols-1 max-w-2xl" // 💡 Center the main content gracefully when sidebars are hidden
+                ? "mx-auto grid-cols-1 max-w-7xl" // 💡 Center the main content gracefully when sidebars are hidden
                 : "xl:grid-cols-[240px_minmax(0,1fr)_300px]" // 3-column layout for large screens
             }`}
           >
